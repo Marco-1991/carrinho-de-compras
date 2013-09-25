@@ -48,4 +48,6 @@ public class CarrinhoTest {
         original = carrinho.menorProduto();
         assertArrayEquals(new Object[]{original}, new Object[]{copia});
     }
+    
+   
 }
