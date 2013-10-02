@@ -20,6 +20,11 @@ public class Produto {
     }
 
     public boolean equals(Produto obj) {
-        return nome.equals(obj.nome);
+        return getNome().equals(obj.getNome());
     }
+
+    public String getNome() {
+        return nome;
+    }
+    
 }

@@ -27,4 +27,10 @@ public class Carrinho {
         }
         return menor;
     }
+
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+    
+    
 }

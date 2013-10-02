@@ -29,15 +29,50 @@ public class ProdutoTest {
         Assert.assertTrue(resposta);
     }
     
-    @Test
-    public void isNull(){
+    @Test(expected = NomeVazioTest.class)
+    public void isNull() throws NomeVazioTest{
         
-        Produto produto = new Produto("",1);
+      Produto produto = new Produto("", 10.00);  
+      String nome;
+      nome = produto.getNome();
         
-        boolean resposta = produto.equals(null);
-        
-        Assert.assertFalse(resposta);
+      Assert.assertEquals(nome, "");
     }
+    
+    @Test(expected = PrecoNegativoTest.class)
+    public void isNegative() throws PrecoNegativoTest{
+        
+      Produto produto = new Produto("Test", -10);  
+      double preco;
+      preco = produto.getPreco();
+      
+    
+      Assert.assertTrue(preco < 0);
+    }
+    
+    @Test(expected = AdicionarProdutoTest.class)
+    public void addProduct() throws AdicionarProdutoTest{
+        
+        Carrinho carrinho = new Carrinho(); 
+        
+        Carro carro = new Carro();
+        
+        carrinho.add(carro);
+        
+        ArrayList
+        
+        for(int i = 0; i < carrinho.getProdutos().size(); i++){
+        
+                if(carro == carrinho.getProdutos().get(i) ) {
+                        
+                   
+                }
+        }
+        
+    }
+    
+    
 }
+
 
 
