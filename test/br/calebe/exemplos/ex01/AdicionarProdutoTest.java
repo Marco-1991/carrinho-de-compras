@@ -5,8 +5,11 @@ package br.calebe.exemplos.ex01;
  
 public class AdicionarProdutoTest extends Exception {
     
-    Produto produtoA = new Produto("Livro", 10);
-    Carro produtoB = new Carro();
-   
+    private Produto produtoA;
+    private Carro produtoB;
     
+    AdicionarProdutoTest(){
+        produtoA = new Produto("Livro", 10);
+        produtoB = new Carro();
+    }
 }

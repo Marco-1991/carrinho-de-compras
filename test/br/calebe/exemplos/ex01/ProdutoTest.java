@@ -50,29 +50,14 @@ public class ProdutoTest {
       Assert.assertTrue(preco < 0);
     }
     
+    
     @Test(expected = AdicionarProdutoTest.class)
     public void addProduct() throws AdicionarProdutoTest{
         
-        Carrinho carrinho = new Carrinho(); 
-        
+        //Carrinho carrinho = new Carrinho(); 
+        Produto produto = new Produto("", 10.00);  
         Carro carro = new Carro();
         
-        carrinho.add(carro);
-        
-        ArrayList
-        
-        for(int i = 0; i < carrinho.getProdutos().size(); i++){
-        
-                if(carro == carrinho.getProdutos().get(i) ) {
-                        
-                   
-                }
-        }
-        
+        Assert.assertSame(produto, carro);
     }
-    
-    
 }
-
-
-
